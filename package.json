@@ -2,13 +2,15 @@
   "name": "power-inspector",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron-build": "ng build --prod && electron .",
+    "start": "tsc main.ts && ng build --prod && electron ."
   },
   "private": true,
   "dependencies": {
@@ -21,7 +23,9 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@types/electron": "^1.6.10",
     "core-js": "^2.4.1",
+    "power-proxy": "0.0.15",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
@@ -33,6 +37,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "electron": "^1.8.4",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
