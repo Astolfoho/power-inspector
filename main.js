@@ -5,8 +5,8 @@ var win;
 function createWindow() {
     // Create the browser window.
     win = new electron_1.BrowserWindow({
-        width: 600,
-        height: 600,
+        width: 1000,
+        height: 800,
         backgroundColor: '#ffffff',
         icon: "file://" + __dirname + "/dist/assets/logo.png"
     });

@@ -1,0 +1,27 @@
+.card-call{
+  padding: 5px;
+  margin: 5px;
+  font-size: 12px;
+}
+
+.card-call .method{
+  font-weight: bold;
+  font-size: 13px;
+}
+.card-call .method.get{
+  color:greenyellow;
+}
+
+.card-call .method.post{
+  color:#E56717;
+}
+
+
+.card-call .method.put{
+ color: goldenrod;
+}
+
+
+.card-call .method.delete{
+  color:red;
+}
