@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CallbackPipe } from './callback-pipe';
 import { RequestItemComponent } from './request-item/request-item.component';
 import { GroupedCallComponent } from './grouped-call/grouped-call.component';
+import { CallDetailsComponent } from './call-details/call-details.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { GroupedCallComponent } from './grouped-call/grouped-call.component';
     AppComponent,
     CallbackPipe,
     RequestItemComponent,
-    GroupedCallComponent
+    GroupedCallComponent,
+    CallDetailsComponent
   ],
   imports: [
     BrowserModule

@@ -1,6 +1,9 @@
 <div class="card card-call">
-  <span class="method {{value.method.toLowerCase()}}">{{value.method}}</span>
-  {{value.path}}
-  <br /> {{value.host}}
-  <br />
+  <div class="limited" [title]="value.url.pathname">
+    <span class="method {{value.method.toLowerCase()}}">
+      {{value.method}}&nbsp;
+    </span>
+    {{value.url.pathname}}
+  </div>
+  {{value.url.hostname}}
 </div>

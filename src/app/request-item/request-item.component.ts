@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { CallWraper } from '../models/call-wraper';
 
 @Component({
@@ -7,7 +7,6 @@ import { CallWraper } from '../models/call-wraper';
   styleUrls: ['./request-item.component.css']
 })
 export class RequestItemComponent implements OnInit {
-
 
   @Input() value: CallWraper;
   constructor() { }

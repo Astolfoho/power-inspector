@@ -1,5 +1,6 @@
 import { IProxyCallRequest, IProxyCall } from 'power-proxy';
 import { ChangeDetectorRef } from '@angular/core';
+import { Url } from 'url';
 
 export class CallWraper {
 
@@ -13,16 +14,12 @@ export class CallWraper {
   }
 
 
-  public get host(): string {
-    return !this._cliReq ? '' : this._cliReq.host;
+  public get url(): Url {
+    return !this._cliReq ? undefined : this._cliReq.url;
   }
 
   public get method(): string {
     return !this._cliReq ? '' : this._cliReq.method;
-  }
-
-  public get path(): string {
-    return !this._cliReq ? '' : this._cliReq.path;
   }
 
 

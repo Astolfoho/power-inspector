@@ -4,12 +4,18 @@
 
 
 
-<label>
-  <input type="checkbox" [checked]="grouped" (change)="grouped = !grouped" />
-  Group Requests
-</label>
-<div *ngIf="!grouped">
-    <app-request-item *ngFor='let call of calls | callback:show' [value]="call"></app-request-item>
+<div style="width:40%;float: left;">
+  <label>
+    <input type="checkbox" [checked]="grouped" (change)="grouped = !grouped" />
+    Group Requests
+  </label>
+  <div *ngIf="!grouped">
+      <app-request-item (click)="selected = call" *ngFor='let call of calls | callback:show' [value]="call"></app-request-item>
+  </div>
+  <app-grouped-call *ngIf="grouped" [value]="gcallsArr()"></app-grouped-call>
 </div>
-<app-grouped-call *ngIf="grouped" [value]="gcallsArr()"></app-grouped-call>
+<div style="width:58%;float:left;" *ngIf="!!selected">
+    <app-call-details [value]="selected"></app-call-details>
+</div>
+
 

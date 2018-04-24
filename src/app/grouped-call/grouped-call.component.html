@@ -1,6 +1,6 @@
-<div *ngFor='let gcall of value' class="card" (dblclick)="gcall.toogle()">
+<div style="padding:5px" *ngFor='let gcall of value' class="card" (dblclick)="gcall.toogle()">
     {{gcall.host}} &nbsp;&nbsp; {{gcall.newCalls}}
     <div *ngIf="gcall.showing">
       <app-request-item *ngFor='let call of gcall.calls | callback:show' [value]="call"></app-request-item>
     </div>
-  </div>
+</div>
